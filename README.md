@@ -12,4 +12,4 @@ Clone or download the project. Then, run:
 - `npx json-server --watch data/db.json --port 8000`: to setup the server
 - `npm run start`: to start the app
 
-**I highly recommend [The Net Ninja's free course on youtube](https://youtu.be/j942wKiXFu8) to get started with React.
+**I highly recommend [The Net Ninja's free course on youtube](https://youtu.be/j942wKiXFu8) to get started with React.**
