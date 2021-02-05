@@ -3,7 +3,7 @@ import TasksList from './TasksList';
 
 const Home = () => {
     const {data: tasks, isLoading, error} = useFetch('http://localhost:8000/tasks');
-    
+
     return (
         <div className="home">
             {error && <div>{error}</div>}
