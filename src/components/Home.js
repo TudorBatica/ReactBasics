@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import TasksList from './TasksList';
 
 const Home = () => {
@@ -8,12 +8,17 @@ const Home = () => {
         {title: 'Be a Playuh', body: 'Comes naturally', id: 2}
     ]);
 
+    const handleDelete = (id) => {
+        setTasks(tasks.filter(tasks => tasks.id !== id));
+    }
 
-    
+    useEffect(() => {
+        console.log("Rendered Home");
+    }, []);
 
     return (
         <div className="home">
-            <TasksList tasks = {tasks} />
+            <TasksList tasks = {tasks} handleDelete = {handleDelete}/>
         </div>
     );
 }
