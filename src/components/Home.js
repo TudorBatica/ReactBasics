@@ -1,24 +1,16 @@
 import { useState, useEffect } from 'react';
+import useFetch from '../hooks/useFetch';
 import TasksList from './TasksList';
 
 const Home = () => {
     
-    const [tasks, setTasks] = useState([
-        {title: 'Learn React', body: 'This will take a while...', id: 1},
-        {title: 'Be a Playuh', body: 'Comes naturally', id: 2}
-    ]);
-
-    const handleDelete = (id) => {
-        setTasks(tasks.filter(tasks => tasks.id !== id));
-    }
-
-    useEffect(() => {
-        console.log("Rendered Home");
-    }, []);
-
+    const {data: tasks, isLoading, error} = useFetch('http://localhost:8000/tasks');
+    console.log(tasks);
     return (
         <div className="home">
-            <TasksList tasks = {tasks} handleDelete = {handleDelete}/>
+            {error && <div>{error}</div>}
+            {isLoading && <div>Loading Tasks...</div>}
+            <TasksList tasks = {tasks}/>
         </div>
     );
 }
