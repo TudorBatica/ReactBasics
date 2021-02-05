@@ -1,18 +1,19 @@
 import { useState } from 'react';
+import TasksList from './TasksList';
 
 const Home = () => {
     
-    const [name, setName] = useState('Playuh');
+    const [tasks, setTasks] = useState([
+        {title: 'Learn React', body: 'This will take a while...', id: 1},
+        {title: 'Be a Playuh', body: 'Comes naturally', id: 2}
+    ]);
 
-    const handleClick = () => {
-        name == 'Playuh' ? setName('Big Dog') : setName('Playuh');
-    }
+
+    
 
     return (
         <div className="home">
-            <h2>List</h2>
-            <p>{name}</p>
-            <button onClick = {handleClick}>Click Me!</button>
+            <TasksList tasks = {tasks} />
         </div>
     );
 }
