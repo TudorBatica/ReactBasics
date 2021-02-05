@@ -14,4 +14,4 @@ Clone or download the project. Then, run:
 
 **I highly recommend [The Net Ninja's free course on youtube](https://youtu.be/j942wKiXFu8) to get started with React.**
 
-![](https://gifyu.com/image/UPhv)
+![Demo](https://gifyu.com/image/UPhv)
