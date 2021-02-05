@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Navbar = () => {
 
     const styles = {
@@ -10,8 +12,8 @@ const Navbar = () => {
         <nav className="navbar">
             <h1> Todo List </h1>
             <div className="links">
-                <a href = "/">Home</a>
-                <a href = "/create" style = {styles}>New Task</a>
+                <Link to="/">Home</Link>
+                <Link to="/create" style={styles}>New Task</Link>
             </div>
         </nav>
     );

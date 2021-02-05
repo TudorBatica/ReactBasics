@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
 import TasksList from './TasksList';
 
@@ -13,6 +12,6 @@ const Home = () => {
             <TasksList tasks = {tasks}/>
         </div>
     );
-}
+} 
  
 export default Home;
